@@ -1,0 +1,8 @@
+```mermaid.flowchart
+flowchart TD
+    Start([Start]) --> Enter[Enter username/password]
+    Enter --> Validate[Validate]
+    Validate --> Decision{Success?}
+    Decision -->|Yes| Dashboard[Dashboard]
+    Decision -->|No| Error[Error]
+```

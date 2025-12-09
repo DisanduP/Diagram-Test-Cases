@@ -1,0 +1,10 @@
+```mermaid.flowchart
+flowchart TD
+    Start([Start]) --> Request[Customer requests return]
+    Request --> Check[Check eligibility]
+    Check --> Decision{Approve/Reject}
+    Decision -->|Approve| Refund[Refund]
+    Decision -->|Reject| Notify[Notify]
+    Refund --> Close([Close])
+    Notify --> Close
+```

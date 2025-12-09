@@ -1,0 +1,9 @@
+```mermaid.flowchart
+flowchart TD
+    Push[Developer pushes code] --> Build[CI build]
+    Build --> Test[Tests]
+    Test --> Staging[Staging deploy]
+    Staging --> QA[QA approval]
+    QA --> Prod[Production deploy]
+    Prod --> Monitor[Monitoring]
+```
