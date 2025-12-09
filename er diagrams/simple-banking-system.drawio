@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-12-09T10:45:18.994Z" agent="BMAD-CLI-ER" version="21.0.0">
+  <diagram name="Converted Diagram" id="pc2u8jaa">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="CUSTOMER" value="CUSTOMER" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="60" width="180" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="CUSTOMER_attr0" value="string name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="CUSTOMER">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="ACCOUNT" value="ACCOUNT" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="180" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="ACCOUNT_attr0" value="string accountNumber" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="ACCOUNT">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="ACCOUNT_attr1" value="float balance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="ACCOUNT">
+          <mxGeometry y="54" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSACTION" value="TRANSACTION" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="60" width="180" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSACTION_attr0" value="string transactionId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="TRANSACTION">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSACTION_attr1" value="date date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="TRANSACTION">
+          <mxGeometry y="54" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="TRANSACTION_attr2" value="float amount" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="TRANSACTION">
+          <mxGeometry y="78" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_0" value="owns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CUSTOMER" target="ACCOUNT">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" x="-20" y="-15"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_1" value="has" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ACCOUNT" target="TRANSACTION">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" x="20" y="-15"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

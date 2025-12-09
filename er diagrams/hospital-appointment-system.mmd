@@ -1,0 +1,25 @@
+erDiagram
+    PATIENT {
+        string name
+        int patientId
+    }
+    DOCTOR {
+        string name
+        int doctorId
+    }
+    APPOINTMENT {
+        int appointmentId
+        date date
+    }
+    PRESCRIPTION {
+        int prescriptionId
+        string medication
+    }
+    PAYMENT {
+        int paymentId
+        float amount
+        date paymentDate
+    }
+    PATIENT ||--o{ APPOINTMENT : books
+    DOCTOR ||--o{ PRESCRIPTION : issues
+    APPOINTMENT ||--o{ PAYMENT : generates

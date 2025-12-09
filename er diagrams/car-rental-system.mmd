@@ -1,0 +1,29 @@
+erDiagram
+    CUSTOMER {
+        string name
+        int customerId
+    }
+    CAR {
+        string model
+        string licensePlate
+        int carId
+    }
+    RENTAL {
+        int rentalId
+        date startDate
+        date endDate
+    }
+    PAYMENT {
+        int paymentId
+        float amount
+        date paymentDate
+    }
+    BRANCH {
+        string location
+        int branchId
+    }
+    CUSTOMER ||--o{ RENTAL : rents
+    CAR ||--o{ RENTAL : is_rented
+    RENTAL ||--o{ PAYMENT : generates
+    CAR }o--|| BRANCH : belongs_to
+

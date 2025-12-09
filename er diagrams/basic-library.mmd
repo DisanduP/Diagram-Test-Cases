@@ -1,0 +1,18 @@
+erDiagram
+    BOOK {
+        string title
+        string author
+        int bookId
+    }
+    MEMBER {
+        string name
+        int memberId
+    }
+    LOAN {
+        int loanId
+        date loanDate
+        date returnDate
+    }
+    MEMBER ||--o{ LOAN : borrows
+    BOOK ||--o{ LOAN : is_loaned
+

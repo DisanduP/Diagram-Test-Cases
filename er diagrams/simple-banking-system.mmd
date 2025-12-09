@@ -1,0 +1,16 @@
+erDiagram
+    CUSTOMER {
+        string name
+    }
+    ACCOUNT {
+        string accountNumber
+        float balance
+    }
+    TRANSACTION {
+        string transactionId
+        date date
+        float amount
+    }
+    CUSTOMER ||--o{ ACCOUNT : owns
+    ACCOUNT ||--o{ TRANSACTION : has
+

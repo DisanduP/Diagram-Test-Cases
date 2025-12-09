@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-12-09T10:54:26.494Z" agent="BMAD-CLI-ER" version="21.0.0">
+  <diagram name="Converted Diagram" id="02d38fy5">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="BOOK" value="BOOK" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="60" width="180" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="BOOK_attr0" value="string title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BOOK">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="BOOK_attr1" value="string author" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BOOK">
+          <mxGeometry y="54" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="BOOK_attr2" value="int bookId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BOOK">
+          <mxGeometry y="78" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEMBER" value="MEMBER" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="60" width="180" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEMBER_attr0" value="string name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="MEMBER">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="MEMBER_attr1" value="int memberId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="MEMBER">
+          <mxGeometry y="54" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="LOAN" value="LOAN" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="310" width="180" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="LOAN_attr0" value="int loanId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="LOAN">
+          <mxGeometry y="30" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="LOAN_attr1" value="date loanDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="LOAN">
+          <mxGeometry y="54" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="LOAN_attr2" value="date returnDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="LOAN">
+          <mxGeometry y="78" width="180" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_0" value="borrows" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MEMBER" target="LOAN">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" x="-20" y="-15"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_1" value="is_loaned" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BOOK" target="LOAN">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" x="20" y="-15"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

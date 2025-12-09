@@ -1,0 +1,30 @@
+erDiagram
+    STUDENT {
+        string name
+        int studentId
+    }
+    COURSE {
+        string title
+        int courseId
+    }
+    MODULE {
+        string moduleName
+        int moduleId
+    }
+    ENROLLMENT {
+        int enrollmentId
+        date enrollmentDate
+    }
+    ASSIGNMENT {
+        int assignmentId
+        string description
+    }
+    GRADE {
+        int gradeId
+        string value
+    }
+    STUDENT ||--o{ ENROLLMENT : enrolls_in
+    ENROLLMENT ||--|| COURSE : of_course
+    COURSE ||--o{ MODULE : has
+    STUDENT ||--o{ ASSIGNMENT : submits
+    ASSIGNMENT ||--o{ GRADE : receives

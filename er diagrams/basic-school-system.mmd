@@ -1,0 +1,15 @@
+erDiagram
+    STUDENT {
+        string name
+        int studentId
+    }
+    CLASS {
+        string className
+        int classId
+    }
+    TEACHER {
+        string name
+        int teacherId
+    }
+    STUDENT }o--|| CLASS : belongs_to
+    TEACHER ||--o{ CLASS : teaches
