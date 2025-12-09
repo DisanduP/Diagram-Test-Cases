@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant User
+    participant Cart
+    participant Checkout
+    participant PaymentGateway
+    participant System
+    User->>Cart: Add product
+    Cart-->>User: Update cart
+    User->>Checkout: Proceed to checkout
+    Checkout->>PaymentGateway: Initiate payment
+    PaymentGateway-->>System: Confirm payment
+    System-->>User: Order confirmation
+```

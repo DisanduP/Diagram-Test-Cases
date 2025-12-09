@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant User
+    participant System
+    User->>System: Enter credentials
+    System->>System: Validate credentials
+    alt Success
+        System-->>User: Return success
+    else Failure
+        System-->>User: Return failure
+    end
+```

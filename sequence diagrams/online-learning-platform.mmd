@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant Student
+    participant System
+    participant ContentService
+    participant ProgressTracker
+    participant CertificateService
+    Student->>System: Enroll in course
+    System-->>Student: Register enrollment
+    System->>ContentService: Load modules
+    ContentService-->>Student: Deliver modules
+    Student->>ProgressTracker: Track progress
+    ProgressTracker-->>Student: Update progress
+    Student->>CertificateService: Request certificate
+    CertificateService-->>Student: Generate certificate
+```
